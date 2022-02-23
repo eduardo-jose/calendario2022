@@ -1,33 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
-@keyframes expand {
-    0% {
-      background-size: 50%;
-      background-position: 0 0;
-    }
-    20% {
-      background-size: 55%;
-      background-position: 0 1em;
-    }
-    100% {
-      background-size: 325%;
-      background-position: -10em -4em;
-    }
-}
-@keyframes expand-rev {
-    0% {
-      background-size: 325%;
-      background-position: -10em -4em;
-    }
-    20% {
-      background-size: 55%;
-      background-position: 0 1em;
-    }
-    100% {
-      background-size: 50%;
-      background-position: 0 0;
-    }
-}
+
 
 /* Animaciones al seleccionar mes */
 @keyframes wobble-horizontal{
@@ -56,92 +29,163 @@
 	}
 }
 @keyframes pulse-grow{
-    to{
-        transform: scale(1.1);
-    }
+  to{
+      transform: scale(1.1);
+  }
 }
 
-body{
-    background-color: #FBF8F1;
-    place-items: center;
+
+
+/* Animaciones de botones */
+@keyframes expand {
+  0% {
+    background-size: 50%;
+    background-position: 0 0;
+  }
+  20% {
+    background-size: 55%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 325%;
+    background-position: -10em -4em;
+  }
 }
+@keyframes expand-rev {
+  0% {
+    background-size: 325%;
+    background-position: -10em -4em;
+  }
+  20% {
+    background-size: 55%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 50%;
+    background-position: 0 0;
+  }
+}
+
+
+
+/* Body */
+body{
+  background-color: #FBF8F1;
+  place-items: center;
+}
+
+
 
 /* Calendario */
 .titulo {
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    font-size: 7vmin;
-    line-height: 10vmin;
-    color: transparent;
-    background: conic-gradient(
-      #D9D7F1 12%, 
-      #BAABDA 12%, #BAABDA 33%, 
-      #E7FBBE 33%, #E7FBBE 55%, 
-      #FFCBCB 55%, #FFCBCB 70%, 
-      #B5DEFF 70%, #B5DEFF 87%, 
-      #F7D1BA 87%);
-    background-size: 50%;
-    background-clip: text;  
-    -webkit-background-clip: text;
-    animation: expand-rev 0.5s ease forwards;
-    cursor: default;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 7vmin;
+  line-height: 10vmin;
+  color: transparent;
+  background: conic-gradient(
+    #D9D7F1 12%, 
+    #BAABDA 12%, #BAABDA 33%, 
+    #E7FBBE 33%, #E7FBBE 55%, 
+    #FFCBCB 55%, #FFCBCB 70%, 
+    #B5DEFF 70%, #B5DEFF 87%, 
+    #F7D1BA 87%);
+  background-size: 50%;
+  background-clip: text;  
+  -webkit-background-clip: text;
+  animation: expand-rev 0.5s ease forwards;
+  cursor: default;
 }
 .titulo:hover {
-    animation: expand 0.5s ease forwards;
+  animation: expand 0.5s ease forwards;
 }
 h1{
-    margin: 0;
-    background-color: #c2e4fc;
+  margin: 0;
+  background-color: #c2e4fc;
 }
 ol{
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 0;
 }
 li{
-    text-align: right;
+  text-align: right;
 }
 .day-name{
-    background: #eee;
-    font-weight: bold;
-    text-align: center;
+  background: #eee;
+  font-weight: bold;
+  text-align: center;
 }
 .container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 .mes{
-    text-align: center;
-    width: 300px;
-    height: 180px;
-    margin: 5px;
-    padding: 5px;
-    border: 1px #bbb solid;
+  text-align: center;
+  width: 300px;
+  height: 180px;
+  margin: 5px;
+  padding: 5px;
+  border: 1px #bbb solid;
 }
-
-
-
+.first-day-enero{
+  grid-column-start: 6;
+}
+.first-day-febrero{
+  grid-column-start: 2;
+}
+.first-day-marzo{
+  grid-column-start: 2;
+}
+.first-day-abril{
+  grid-column-start: 5;
+}
+.first-day-mayo{
+  grid-column-start: 7;
+}
+.first-day-junio{
+  grid-column-start: 3;
+}
+.first-day-julio{
+  grid-column-start: 5;
+}
+.first-day-agosto{
+  grid-column-start: 1;
+}
+.first-day-septiembre{
+  grid-column-start: 4;
+}
+.first-day-octubre{
+  grid-column-start: 6;
+}
+.first-day-noviembre{
+  grid-column-start: 2;
+}
+.first-day-diciembre{
+  grid-column-start: 4;
+}
 .enero:hover{
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 .febrero:hover{
-    animation-name: wobble-horizontal;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 1;
+  animation-name: wobble-horizontal;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
 }
 .marzo:hover{
-    transform: rotate(4deg);
+  transform: rotate(4deg);
 }
 .abril:hover{
-    animation-name: pulse-grow;
-    animation-duration: .3s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  animation-name: pulse-grow;
+  animation-duration: .3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
+
 
 
 /* Botones de Redes Sociales */
@@ -150,23 +194,23 @@ li{
     display: flex;
     flex-direction: row-reverse;
     margin-right: 50px;
-}
-.wrapper {
-  display: inline-flex;
-}
-.wrapper .icon {
-  position: relative;
-  background-color: #ffffff;
-  border-radius: 50%;
-  padding: 5px;
-  margin: 6px;
-  width: 40px;
-  height: 40px;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  }
+  .wrapper {
+    display: inline-flex;
+  }
+  .wrapper .icon {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 6px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -228,43 +272,4 @@ li{
 .wrapper .github:hover .tooltip::before {
   background-color: #333333;
   color: #ffffff;
-}
-
-
-
-.first-day-enero{
-    grid-column-start: 6;
-}
-.first-day-febrero{
-    grid-column-start: 2;
-}
-.first-day-marzo{
-    grid-column-start: 2;
-}
-.first-day-abril{
-    grid-column-start: 5;
-}
-.first-day-mayo{
-    grid-column-start: 7;
-}
-.first-day-junio{
-    grid-column-start: 3;
-}
-.first-day-julio{
-    grid-column-start: 5;
-}
-.first-day-agosto{
-    grid-column-start: 1;
-}
-.first-day-septiembre{
-    grid-column-start: 4;
-}
-.first-day-octubre{
-    grid-column-start: 6;
-}
-.first-day-noviembre{
-    grid-column-start: 2;
-}
-.first-day-diciembre{
-    grid-column-start: 4;
 }
