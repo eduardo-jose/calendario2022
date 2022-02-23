@@ -70,7 +70,7 @@
 }
 
 /* Calendario */
-.titulo {
+.titulo{
   text-align: center;
   font-family: 'Poppins', sans-serif;
   font-size: 7vmin;
@@ -89,11 +89,12 @@
   animation: expand-rev 0.5s ease forwards;
   cursor: default;
 }
-.titulo:hover {
+.titulo:hover{
   animation: expand 0.5s ease forwards;
 }
 h1{
   margin: 0;
+  padding: 2px 0;
   background-color: #c2e4fc;
 }
 ol{
@@ -104,6 +105,7 @@ ol{
 }
 li{
   text-align: right;
+  padding-right: 5px;
 }
 .day-name{
   background: #eee;
@@ -187,11 +189,12 @@ li{
     display: flex;
     flex-direction: row-reverse;
     margin-right: 50px;
+    margin-top: 20px;
   }
-  .wrapper {
+.wrapper {
     display: inline-flex;
   }
-  .wrapper .icon {
+.wrapper .icon {
     position: relative;
     background-color: #ffffff;
     border-radius: 50%;
