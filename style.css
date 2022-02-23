@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
-
-
 /* Animaciones al seleccionar mes */
 @keyframes wobble-horizontal{
 	16.65%{
@@ -34,8 +32,6 @@
   }
 }
 
-
-
 /* Animaciones de botones */
 @keyframes expand {
   0% {
@@ -66,15 +62,12 @@
   }
 }
 
-
-
-/* Body */
-body{
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   background-color: #FBF8F1;
-  place-items: center;
 }
-
-
 
 /* Calendario */
 .titulo {
