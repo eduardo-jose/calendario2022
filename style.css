@@ -29,6 +29,7 @@
     }
 }
 
+/* Animaciones al seleccionar mes */
 @keyframes wobble-horizontal{
 	16.65%{
 		transform: translateX(9px);
@@ -62,11 +63,14 @@
 
 body{
     background-color: #FBF8F1;
+    place-items: center;
 }
+
+/* Calendario */
 .titulo {
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    font-size: 10vmin;
+    font-size: 7vmin;
     line-height: 10vmin;
     color: transparent;
     background: conic-gradient(
@@ -139,6 +143,92 @@ li{
     animation-direction: alternate;
 }
 
+
+/* Botones de Redes Sociales */
+.container2{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 50px;
+}
+.wrapper {
+  display: inline-flex;
+}
+.wrapper .icon {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 6px;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background-color: #3b5999;
+  color: #ffffff;
+}
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background-color: #46c1f6;
+  color: #ffffff;
+}
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background-color: #e1306c;
+  color: #ffffff;
+}
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background-color: #333333;
+  color: #ffffff;
+}
 
 
 
