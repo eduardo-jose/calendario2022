@@ -1,5 +1,5 @@
-document.getElementById("enero").onclick = mesEnero;
+document.getElementById('titulo').ondblclick = nuevoTitulo;
 
-let mesEnero = () => {
-    
+function nuevoTitulo(){
+    document.getElementById('titulo').innerHTML = 'Creado por EDU';
 }
