@@ -87,7 +87,7 @@
   background-clip: text;  
   -webkit-background-clip: text;
   animation: expand-rev 0.5s ease forwards;
-  cursor: default;
+  cursor: pointer;
 }
 .titulo:hover{
   animation: expand 0.5s ease forwards;
